@@ -9,7 +9,14 @@ class ApplicationController < ActionController::Base
   http_basic_authenticate_with name: ENV["ENV_USERNAME"],
                                password: ENV["ENV_PASSWORD"]
                   
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :current_user
 
+  def authorize
+    redirect_to '/login' unless current_user
+  end
 
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}

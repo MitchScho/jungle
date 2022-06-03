@@ -1,9 +1,6 @@
 class Admin::CategoriesController < ApplicationController
 
   def index
-    # @categories = Category.find(params[:name]).all
-    # @categories = Category.order(:id :desc).all
-    # @categories = Category.order(:name).all
      @categories = Category.order('name').all
   end
 
