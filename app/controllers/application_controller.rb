@@ -6,8 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  http_basic_authenticate_with name: ENV["ENV_USERNAME"],
-                               password: ENV["ENV_PASSWORD"]
+  
                   
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
