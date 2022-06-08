@@ -7,6 +7,13 @@
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
+      <% if enhanced_cart.empty? %>
+
+        <div class="alert alert-warning">
+          <p>The cart is empty, click here to get back to <%= link_to 'the main page', :root %>.</p>
+        </div>
+
+      <% else %> 
         <tr>
           <th colspan="2">Product</th>
           <th>Unit Price</th>
@@ -31,7 +38,7 @@
       </tfoot>
     </table>
   </div>
-
+  
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -48,5 +55,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %> 
 </section>
