@@ -29,3 +29,11 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+## Screenshots
+!["Jungle Home Page"](https://github.com/MitchScho/jungle/blob/master/docs/jungle-home.png)
+!["Jungle Products Page"](https://github.com/MitchScho/jungle/blob/master/docs/jungle-products.png)
+!["Jungle Shopping Cart Page"](https://github.com/MitchScho/jungle/blob/master/docs/jungle-cart.png)
+
+
+
